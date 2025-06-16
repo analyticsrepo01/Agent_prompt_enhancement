@@ -1,0 +1,50 @@
+[
+  {
+    "input": "Product Name: 'CozyCloud Memory Foam Pillow'; Features: Adapts to your head and neck, relieves pressure points, hypoallergenic, machine washable cover.",
+    "expected_output": "Drift off to dreamland with the CozyCloud Memory Foam Pillow! This isn't just a pillow; it's your personal cloud of comfort. Its unique memory foam molds perfectly to the contours of your head and neck, providing customized support and relieving painful pressure points. Say goodbye to restless nights and hello to rejuvenating sleep! Plus, it's hypoallergenic, making it perfect for allergy sufferers. And when it's time for a refresh, simply toss the machine-washable cover in the wash. Sweet dreams are just a CozyCloud away!"
+  },
+  {
+    "input": "Product Name: 'AquaBlast Portable Bluetooth Speaker'; Features: Waterproof, Bluetooth 5.0, 10-hour battery life, built-in microphone, vibrant colors.",
+    "expected_output": "Take the party anywhere with the AquaBlast Portable Bluetooth Speaker! This rugged and waterproof speaker is ready for anything, from poolside jams to beach bonfires. Enjoy crystal-clear audio with Bluetooth 5.0 connectivity and keep the music going all day long with a 10-hour battery life. Need to take a call? The built-in microphone makes hands-free calling a breeze. And with a range of vibrant colors to choose from, you can find the perfect AquaBlast to match your style. Get ready to make a splash!"
+  },
+  {
+    "input": "Product Name: 'EcoBloom Reusable Shopping Bags'; Features: Made from recycled materials, durable, lightweight, folds easily for storage, set of 5.",
+    "expected_output": "Shop sustainably in style with EcoBloom Reusable Shopping Bags! These aren't your grandma's flimsy shopping bags. Made from durable recycled materials, they're built to withstand even the heaviest grocery hauls. Lightweight and easy to carry, they fold down compactly for convenient storage in your car or purse. With a set of 5, you'll always have a bag on hand. Do your part for the planet while looking good doing it with EcoBloom!"
+  },
+  {
+    "input": "Product Name: 'SmartBrew Automatic Coffee Maker'; Features: Programmable timer, adjustable brew strength, keeps coffee warm for 2 hours, easy to clean.",
+    "expected_output": "Wake up to the perfect cup of coffee every morning with the SmartBrew Automatic Coffee Maker! This intelligent coffee maker lets you set a timer so your coffee is ready when you are. Customize your brew strength to your liking and enjoy piping hot coffee for up to 2 hours thanks to its warming plate. Cleaning is a snap, so you can spend less time on chores and more time enjoying your delicious brew. Start your day the smart way with SmartBrew!"
+  },
+  {
+    "input": "Product Name: 'ZenGarden Essential Oil Diffuser'; Features: Ultrasonic technology, multiple light settings, auto shut-off, whisper-quiet operation, elegant design.",
+    "expected_output": "Transform your home into a tranquil oasis with the ZenGarden Essential Oil Diffuser. Using ultrasonic technology, this diffuser gently releases your favorite essential oils, creating a calming and aromatic atmosphere. Choose from multiple light settings to create the perfect ambiance, and enjoy whisper-quiet operation for undisturbed relaxation. The auto shut-off feature ensures safety and peace of mind. With its elegant design, the ZenGarden Diffuser is a beautiful and functional addition to any space. Find your inner peace with ZenGarden!"
+  },
+  {
+    "input": "Product Name: 'DuraGrip Work Gloves'; Features: Reinforced palms, breathable material, adjustable wrist strap, touchscreen compatible fingertips, available in multiple sizes.",
+    "expected_output": "Get the job done right with DuraGrip Work Gloves! These gloves are built to last, featuring reinforced palms for superior durability and protection. The breathable material keeps your hands cool and comfortable, even during long hours of work. The adjustable wrist strap ensures a secure and comfortable fit, while the touchscreen compatible fingertips allow you to use your devices without removing your gloves. Available in multiple sizes for the perfect fit. DuraGrip: For hands that work hard!"
+  },
+  {
+    "input": "Product Name: 'PetPal Automatic Feeder'; Features: Programmable portions, voice recording feature, easy to clean, keeps food fresh, battery backup.",
+    "expected_output": "Never worry about missing a feeding again with the PetPal Automatic Feeder! This smart feeder allows you to program precise portions to keep your pet healthy and happy. Record a personalized message to call your pet to mealtime. The easy-to-clean design makes maintenance a breeze, and the feeder keeps food fresh between feedings. Plus, a battery backup ensures your pet is fed even during power outages. Give your pet the best care with PetPal!"
+  },
+  {
+    "input": "Product Name: 'GlowBright LED String Lights'; Features: Waterproof, connectable, energy-efficient, warm white light, 50 feet long.",
+    "expected_output": "Create a magical ambiance with GlowBright LED String Lights! These waterproof lights are perfect for indoor or outdoor use, adding a touch of warmth and charm to any space. Connect multiple sets to create longer strands and customize your lighting display. Energy-efficient LEDs provide a warm white glow while saving you money on your electricity bill. With 50 feet of lights, you can illuminate your patio, garden, or living room with ease. Let your space shine with GlowBright!"
+  },
+  {
+    "input": "Product Name: 'ChefPro Stainless Steel Knife Set'; Features: Forged blades, ergonomic handles, full tang construction, includes sharpening steel, comes with a wooden block.",
+    "expected_output": "Slice, dice, and chop like a pro with the ChefPro Stainless Steel Knife Set! These knives feature forged blades for exceptional sharpness and durability. The ergonomic handles provide a comfortable and secure grip, while the full tang construction ensures balance and stability. Keep your knives in top condition with the included sharpening steel. And with the elegant wooden block, you'll have a safe and stylish way to store your knives. Elevate your culinary skills with ChefPro!"
+  },
+  {
+    "input": "Product Name: 'SkyView Telescope'; Features: 70mm aperture, 300mm focal length, includes two eyepieces, lightweight and portable, easy to assemble.",
+    "expected_output": "Explore the wonders of the universe with the SkyView Telescope! With its 70mm aperture, this telescope gathers plenty of light for bright and clear views of the moon, planets, and stars. The 300mm focal length provides detailed images, and the included eyepieces offer different magnification options. Lightweight and portable, you can take it anywhere for stargazing on the go. Easy to assemble, even beginners can start exploring the night sky in minutes. Unlock the secrets of the cosmos with SkyView!"
+  },
+  {
+    "input": "Product Name: 'ComfyFit Running Shoes'; Features: Lightweight design, breathable mesh upper, cushioned insole, durable rubber outsole, available in multiple colors.",
+    "expected_output": "Experience unparalleled comfort and performance with ComfyFit Running Shoes! These lightweight shoes are designed to help you go the extra mile. The breathable mesh upper keeps your feet cool and dry, while the cushioned insole provides superior comfort with every step. The durable rubber outsole offers excellent traction on any surface. Available in a variety of colors to match your style. Run further, faster, and in complete comfort with ComfyFit!"
+  },
+  {
+    "input": "Product Name: 'PlantLife Indoor Herb Garden Kit'; Features: Includes seeds, soil, and pots, self-watering system, LED grow light, compact design, easy to use.",
+    "expected_output": "Grow your own fresh herbs indoors with the PlantLife Indoor Herb Garden Kit! This kit includes everything you need to start your own herb garden, including seeds, soil, and pots. The self-watering system ensures your plants get the perfect amount of moisture, while the LED grow light provides the necessary light for healthy growth. The compact design makes it perfect for small spaces, and it's incredibly easy to use, even for beginners. Enjoy fresh, homegrown herbs all year round with PlantLife!"
+  }
+]

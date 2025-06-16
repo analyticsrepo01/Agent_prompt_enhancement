@@ -1,0 +1,50 @@
+[
+  {
+    "input": "Product Name: 'CozyCloud Memory Foam Pillow'; Features: 'Adapts to your head and neck, relieves pressure points, hypoallergenic, machine washable cover'",
+    "expected_output": "Drift off to dreamland with the CozyCloud Memory Foam Pillow! This isn't just a pillow; it's your personal sleep sanctuary. It gently cradles your head and neck, conforming to your unique shape to eliminate pressure points and banish those restless nights. Made with hypoallergenic materials, it's perfect for sensitive sleepers. Plus, the machine-washable cover makes keeping it fresh and clean a breeze. Say goodbye to tossing and turning and hello to blissful, restorative sleep!"
+  },
+  {
+    "input": "Product Name: 'AquaBlast Portable Bluetooth Speaker'; Features: 'Waterproof, Bluetooth 5.0, 10-hour battery life, built-in microphone'",
+    "expected_output": "Unleash the ultimate soundtrack to your adventures with the AquaBlast Portable Bluetooth Speaker! Whether you're poolside, at the beach, or caught in a downpour, this speaker is ready to rock. Its waterproof design means worry-free listening, while Bluetooth 5.0 ensures a stable and seamless connection. Keep the party going all day long with its impressive 10-hour battery life. Need to take a call? The built-in microphone makes hands-free communication a cinch. Get ready to turn up the volume and make some waves!"
+  },
+  {
+    "input": "Product Name: 'SmartChef Digital Kitchen Scale'; Features: 'Accurate measurements, Tare function, LCD display, measures in grams and ounces'",
+    "expected_output": "Unlock your inner chef with the SmartChef Digital Kitchen Scale! Precision is key to culinary success, and this scale delivers accurate measurements every time. The convenient Tare function allows you to easily weigh ingredients in bowls and containers, while the clear LCD display provides easy-to-read measurements in both grams and ounces. Whether you're baking a delicate cake or portioning out meals, the SmartChef scale is your indispensable kitchen companion for perfect results."
+  },
+  {
+    "input": "Product Name: 'ZenGarden Essential Oil Diffuser'; Features: 'Ultrasonic technology, whisper-quiet operation, auto shut-off, 7 color LED lights'",
+    "expected_output": "Transform your space into a tranquil oasis with the ZenGarden Essential Oil Diffuser. This diffuser uses ultrasonic technology to gently disperse your favorite essential oils, filling your home with soothing aromas. Its whisper-quiet operation ensures a peaceful atmosphere, perfect for relaxation and sleep. The auto shut-off feature provides added safety and peace of mind. Enhance your ambiance with the 7 color LED lights, creating a calming and visually stunning experience. Embrace the power of aromatherapy and create your own personal ZenGarden."
+  },
+  {
+    "input": "Product Name: 'DuraShield Phone Case'; Features: 'Military-grade protection, slim design, non-slip grip, raised edges for screen protection'",
+    "expected_output": "Protect your precious phone with the DuraShield Phone Case! Engineered with military-grade protection, this case can withstand drops, bumps, and scratches, keeping your phone safe from everyday hazards. Its slim design adds minimal bulk, while the non-slip grip ensures a secure hold. Raised edges provide an extra layer of defense for your screen, preventing scratches and cracks. Don't compromise on style or protection \u2013 choose the DuraShield and enjoy peace of mind knowing your phone is always safe."
+  },
+  {
+    "input": "Product Name: 'EcoBloom Reusable Shopping Bags'; Features: 'Made from recycled materials, durable and lightweight, folds compact for easy storage, set of 5'",
+    "expected_output": "Shop sustainably and stylishly with the EcoBloom Reusable Shopping Bags! Made from recycled materials, these bags are an eco-friendly alternative to single-use plastic bags. They're incredibly durable and lightweight, capable of carrying even the heaviest groceries. When not in use, they fold compact for easy storage in your car or purse. With a set of 5, you'll always have a bag on hand. Make a positive impact on the planet while looking good \u2013 choose EcoBloom!"
+  },
+  {
+    "input": "Product Name: 'Pawsitive Pet Grooming Brush'; Features: 'Removes loose fur, gentle on skin, self-cleaning button, ergonomic handle'",
+    "expected_output": "Keep your furry friend looking their best with the Pawsitive Pet Grooming Brush! This brush gently removes loose fur, reducing shedding and leaving your pet's coat healthy and shiny. The gentle bristles are kind to your pet's skin, ensuring a comfortable grooming experience. The self-cleaning button makes removing collected fur a breeze, and the ergonomic handle provides a comfortable grip. Make grooming a bonding experience with the Pawsitive Pet Grooming Brush!"
+  },
+  {
+    "input": "Product Name: 'StarGazer Telescope'; Features: '70mm aperture, 300mm focal length, adjustable tripod, includes two eyepieces'",
+    "expected_output": "Unleash your inner astronomer with the StarGazer Telescope! Explore the wonders of the night sky with this easy-to-use telescope. Its 70mm aperture gathers ample light for bright and clear views of the moon, planets, and stars. The 300mm focal length provides excellent magnification, and the adjustable tripod ensures a stable viewing platform. Includes two eyepieces for different magnification levels. Embark on a cosmic adventure with the StarGazer Telescope!"
+  },
+  {
+    "input": "Product Name: 'QuickCharge USB Wall Charger'; Features: 'Fast charging technology, dual USB ports, compact design, universal compatibility'",
+    "expected_output": "Power up your devices in a flash with the QuickCharge USB Wall Charger! This charger features fast charging technology, delivering lightning-fast charging speeds to compatible devices. With dual USB ports, you can charge two devices simultaneously. Its compact design makes it perfect for travel, and its universal compatibility ensures it works with a wide range of devices. Stop waiting around for your devices to charge \u2013 get the QuickCharge!"
+  },
+  {
+    "input": "Product Name: 'ComfyStep Orthopedic Insoles'; Features: 'Arch support, shock absorption, breathable fabric, suitable for all shoe types'",
+    "expected_output": "Experience all-day comfort with the ComfyStep Orthopedic Insoles! These insoles provide superior arch support and shock absorption, reducing foot pain and fatigue. The breathable fabric keeps your feet cool and dry, while the slim design makes them suitable for all shoe types. Whether you're on your feet all day or just looking for extra comfort, the ComfyStep insoles will keep you feeling great."
+  },
+  {
+    "input": "Product Name: 'Gourmet Spice Set'; Features: '12 unique spices, hand-selected, airtight containers, includes recipe cards'",
+    "expected_output": "Elevate your culinary creations with the Gourmet Spice Set! This set features 12 unique, hand-selected spices from around the world, guaranteed to add depth and flavor to your dishes. Each spice is stored in an airtight container to preserve its freshness. Includes recipe cards to inspire your next culinary masterpiece. Unlock a world of flavor with the Gourmet Spice Set!"
+  },
+  {
+    "input": "Product Name: 'WriteRight Ergonomic Pen'; Features: 'Comfortable grip, smooth ink flow, durable construction, available in multiple colors'",
+    "expected_output": "Experience effortless writing with the WriteRight Ergonomic Pen! Designed for ultimate comfort, this pen features a comfortable grip that reduces hand fatigue. The smooth ink flow ensures a seamless writing experience, while the durable construction guarantees long-lasting performance. Available in a variety of colors to suit your style. Make writing a pleasure with the WriteRight Ergonomic Pen!"
+  }
+]
