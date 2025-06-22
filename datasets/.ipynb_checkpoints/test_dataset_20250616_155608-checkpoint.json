@@ -1,0 +1,146 @@
+[
+  {
+    "input": {
+      "treatments": "Amoxicillin 500mg TID for 7 days",
+      "icd_surgery_description": "Acute bacterial sinusitis (J01.90)",
+      "exclusions": "Cosmetic procedures"
+    },
+    "expected_output": {
+      "conclusion": "yes",
+      "probability score": 0.95,
+      "explanation": "Amoxicillin is a standard antibiotic treatment for acute bacterial sinusitis. It is effective in resolving the infection and alleviating symptoms. The benefits of treatment outweigh the risks of potential side effects like nausea or diarrhea. It is essential for treating the infection and not related to cosmetic or lifestyle purposes. This treatment is directly treating the disease."
+    }
+  },
+  {
+    "input": {
+      "treatments": "Rhinoplasty",
+      "icd_surgery_description": "Deviated septum (J34.2)",
+      "exclusions": "Cosmetic procedures"
+    },
+    "expected_output": {
+      "conclusion": "no",
+      "probability score": 0.2,
+      "explanation": "While rhinoplasty can address a deviated septum, it is primarily considered a cosmetic procedure and is often excluded from coverage. The treatment is relevant to the exclusion list, as rhinoplasty is considered a cosmetic procedure."
+    }
+  },
+  {
+    "input": {
+      "treatments": "Physical therapy sessions",
+      "icd_surgery_description": "Lumbar spinal stenosis (M48.06)",
+      "exclusions": "Experimental treatments"
+    },
+    "expected_output": {
+      "conclusion": "yes",
+      "probability score": 0.85,
+      "explanation": "Physical therapy is a standard and often necessary component in managing lumbar spinal stenosis. It helps improve mobility, reduce pain, and strengthen supporting muscles. The benefits typically outweigh the risks, and it's not for cosmetic purposes. The treatment indirectly treats the disease by managing the symptoms and improving function."
+    }
+  },
+  {
+    "input": {
+      "treatments": "Omeprazole 20mg daily",
+      "icd_surgery_description": "Gastroesophageal reflux disease (GERD) (K21.9)",
+      "exclusions": "Lifestyle modifications"
+    },
+    "expected_output": {
+      "conclusion": "yes",
+      "probability score": 0.9,
+      "explanation": "Omeprazole is a proton pump inhibitor commonly prescribed for GERD. It effectively reduces stomach acid production, alleviating symptoms like heartburn. The benefits outweigh the risks of potential side effects like headache or nausea. While lifestyle modifications are important, medication is often necessary for effective management. The treatment directly addresses the underlying cause of GERD symptoms."
+    }
+  },
+  {
+    "input": {
+      "treatments": "Repeat consultation with cardiologist",
+      "icd_surgery_description": "Essential hypertension (I10)",
+      "exclusions": "None"
+    },
+    "expected_output": {
+      "conclusion": "yes",
+      "probability score": 0.99,
+      "explanation": "Repeat consultations are necessary for monitoring and managing essential hypertension. Follow-up visits are essential to assess treatment effectiveness, adjust medications, and address any emerging concerns. This falls under the category of necessary follow-up care."
+    }
+  },
+  {
+    "input": {
+      "treatments": "GST - ADD GST",
+      "icd_surgery_description": "Appendectomy (K35.80)",
+      "exclusions": "None"
+    },
+    "expected_output": {
+      "conclusion": "yes",
+      "probability score": 1.0,
+      "explanation": "The description 'GST - ADD GST' indicates a tax component associated with the appendectomy procedure. While not directly related to the medical necessity of the procedure itself, it is related to the total cost and billing. As per the instructions, any descriptions that resemble GST inclusions should conclude as 'yes'."
+    }
+  },
+  {
+    "input": {
+      "treatments": "Botox injections",
+      "icd_surgery_description": "Migraine (G43.90)",
+      "exclusions": "Cosmetic procedures"
+    },
+    "expected_output": {
+      "conclusion": "yes",
+      "probability score": 0.75,
+      "explanation": "Botox injections can be used to treat chronic migraines. While Botox is also used for cosmetic procedures, its use for migraine treatment is a recognized and often effective therapy. The benefits of reduced migraine frequency and severity can outweigh the risks of potential side effects. The treatment is treating the disease indirectly by preventing the migraines."
+    }
+  },
+  {
+    "input": {
+      "treatments": "Treadmill test",
+      "icd_surgery_description": "Coronary artery disease (I25.10)",
+      "exclusions": "Experimental treatments"
+    },
+    "expected_output": {
+      "conclusion": "yes",
+      "probability score": 0.95,
+      "explanation": "A treadmill test is a standard diagnostic procedure for coronary artery disease. It helps assess the heart's function during exercise and identify any potential blockages or abnormalities. It is essential for diagnosis and not for cosmetic purposes. This treatment is directly related to the disease."
+    }
+  },
+  {
+    "input": {
+      "treatments": "Vitamin D supplement",
+      "icd_surgery_description": "Osteoporosis (M81.0)",
+      "exclusions": "Lifestyle modifications"
+    },
+    "expected_output": {
+      "conclusion": "yes",
+      "probability score": 0.65,
+      "explanation": "Vitamin D supplementation is often recommended for individuals with osteoporosis to improve calcium absorption and bone health. While lifestyle modifications play a significant role, supplementation can be a necessary adjunct to treatment. The benefits of improved bone health typically outweigh the risks. This treatment indirectly treats the disease."
+    }
+  },
+  {
+    "input": {
+      "treatments": "Oxycodone for post-operative pain",
+      "icd_surgery_description": "Total knee arthroplasty (M17.1)",
+      "exclusions": "Long-term opioid therapy"
+    },
+    "expected_output": {
+      "conclusion": "yes",
+      "probability score": 0.8,
+      "explanation": "Oxycodone, a strong opioid analgesic, is commonly prescribed for short-term pain management following a total knee arthroplasty. While long-term opioid therapy is often discouraged, the short-term use of oxycodone for severe post-operative pain is generally considered appropriate. The benefits of pain relief outweigh the risks of short-term side effects when used as directed. This is a standard practice following surgery and directly addresses pain."
+    }
+  },
+  {
+    "input": {
+      "treatments": "Benadryl 25mg as needed",
+      "icd_surgery_description": "Adverse reaction to penicillin (T88.7)",
+      "exclusions": "Cosmetic procedures"
+    },
+    "expected_output": {
+      "conclusion": "yes",
+      "probability score": 0.95,
+      "explanation": "Benadryl (diphenhydramine) is an antihistamine commonly used to treat mild allergic reactions, such as those caused by penicillin. It effectively relieves symptoms like itching, hives, and rash. The benefits of symptom relief outweigh the risks of potential side effects like drowsiness. It is essential for managing the allergic reaction and not related to cosmetic purposes. This treatment is directly treating the disease."
+    }
+  },
+  {
+    "input": {
+      "treatments": "Meditation and mindfulness training",
+      "icd_surgery_description": "Generalized anxiety disorder (F41.1)",
+      "exclusions": "Experimental treatments"
+    },
+    "expected_output": {
+      "conclusion": "yes",
+      "probability score": 0.7,
+      "explanation": "Meditation and mindfulness training are increasingly recognized as effective non-pharmacological approaches to managing generalized anxiety disorder. They help reduce stress, improve emotional regulation, and promote a sense of calm. The benefits typically outweigh any risks. While not a direct cure, they can significantly improve symptoms and quality of life. The treatment indirectly treats the disease by managing the symptoms and improving mental well-being."
+    }
+  }
+]

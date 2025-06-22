@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "original_prompt": "\n   ### Instructions:\n    - Use your medical knowledge to analyze the given specialty description and determine its relevance in relation to the mother claim's specialty, the mother claim's ICD and surgery descriptions list, and the exclusion list.\n   \n    - When checking for specialty relevance, first, check if the specialty description is the same as the mother claim's specialty and the specialty description is related to the mother claim's ICD and surgery descriptions list.\n    Conclude as relevant only when the specialty description is the same as the mother claim's specialty and the specialty is related to the mother claim's ICD and surgery descriptions list\n\n    For example, if the mother claim's specialty is urology, and the specialty description is 'general surgery', conclude as not relevant.\n\n    For example, if the mother claim's ICD and surgery descriptions are related to gynaecology, and the specialty description is 'gastroenterology', conclude as not relevant.\n\n    - Consider also the following edge cases: (1) if the specialty description is related to cancers or oncology, but the mother claim's ICD and surgery descriptions list are related to benign neoplasms or tumors, conclude as not relevant.\n   \n    - If the specialty description is 'Not able to find specialty.' / 'GP hospital' or if the specialty description is too brief or vague to establish relevance, return \"uncertain\" as 'conclusion'\n   \n    - If relevant, explain how the specialty description aligns with the mother claim's specialty and the diseases, diagnoses or surgeries provided in the list of ICD and surgery descriptions of the mother claim.\n   \n    - If not relevant, provide a brief explanation as to why the specialty description is not applicable to the diseases, diagnoses or surgeries mentioned in the ICD and surgery descriptions list of the mother claim or the mother claim's specialty.\n   \n    - Lastly, analyse the exclusion list and verify if the specialty description is relevant to the provided exclusions. If the specialty is relevant to the exclusions, conclude as 'no', and an 'explanation' should be provided as the specialty description is relevant to exclusion list.\n  \n    ### Specialty Description: {specialty_description}\n    ### The mother claim's specialty {mother_claim_specialty_description}\n    ### The mother claim's ICD and surgery descriptions: {icd_surgery_description}\n    ### The exclusion list: {exclusions}\n   \n    ### Question: Analyze the given specialty description and determine its relevance in relation to the mother claim's specialty, the mother claim's ICD and surgery descriptions list, and the exclusion list.\n   \n    ### Response\nMUST Provide the output in JSON format with a key 'conclusion' and  its value - either a 'yes' or 'no' stating the relevance, and another key 'explanation' providing the explanation. Ensure that the explanation is given in complete sentences without any truncations. If you have strong confidence about the relevance of the specialty, reply with 'yes' or 'no'. If you are not sure, reply with 'uncertain'.\n\n\n    ",
+    "total_cases": 12,
+    "initial_success_rate": 100.0,
+    "generation_timestamp": "20250619_125026"
+  },
+  "test_cases": [
+    {
+      "input": "{'specialty_description': 'Urology', 'mother_claim_specialty_description': 'Urology', 'icd_surgery_description': 'Kidney stone removal, urinary tract infection, prostate biopsy', 'exclusions': 'Cosmetic surgery, routine checkups'}",
+      "expected_output": "{'conclusion': 'yes', 'explanation': \"The specialty description 'Urology' matches the mother claim's specialty. The ICD and surgery descriptions related to kidney stone removal, urinary tract infection, and prostate biopsy align with the field of Urology, which specializes in the urinary tract and male reproductive organs. The exclusion list is not relevant to the specialty description.\"}"
+    },
+    {
+      "input": "{'specialty_description': 'Cardiology', 'mother_claim_specialty_description': 'Gastroenterology', 'icd_surgery_description': 'Colonoscopy, Endoscopic Ultrasound, Liver Biopsy', 'exclusions': 'Psychiatric care, dental procedures'}",
+      "expected_output": "{'conclusion': 'no', 'explanation': \"The specialty description 'Cardiology' does not match the mother claim's specialty 'Gastroenterology'. The ICD and surgery descriptions related to colonoscopy, endoscopic ultrasound, and liver biopsy are associated with gastroenterology, not cardiology. Therefore, the specialty description is not relevant.\"}"
+    },
+    {
+      "input": "{'specialty_description': 'Oncology', 'mother_claim_specialty_description': 'General Surgery', 'icd_surgery_description': 'Benign tumor excision, lipoma removal', 'exclusions': 'None'}",
+      "expected_output": "{'conclusion': 'no', 'explanation': \"The specialty description 'Oncology' is related to cancers. However, the mother claim's ICD and surgery descriptions are related to benign tumors. Therefore, the specialty description is not relevant to the mother claim's ICD and surgery descriptions.\"}"
+    },
+    {
+      "input": "{'specialty_description': 'Not able to find specialty.', 'mother_claim_specialty_description': 'Orthopedics', 'icd_surgery_description': 'Knee replacement, ACL reconstruction, fracture repair', 'exclusions': 'Alternative medicine'}",
+      "expected_output": "{'conclusion': 'uncertain', 'explanation': \"The specialty description is 'Not able to find specialty.' which is too brief or vague to establish relevance.\"}"
+    },
+    {
+      "input": "{'specialty_description': 'Dermatology', 'mother_claim_specialty_description': 'Dermatology', 'icd_surgery_description': 'Skin biopsy, eczema treatment, acne management', 'exclusions': 'Treatment of malignant melanoma'}",
+      "expected_output": "{'conclusion': 'no', 'explanation': \"The specialty description 'Dermatology' matches the mother claim's specialty. The ICD and surgery descriptions relate to skin biopsy, eczema treatment, and acne management, which align with dermatology. However, the exclusion list includes 'Treatment of malignant melanoma,' which falls under dermatology. Therefore, the specialty description is relevant to the exclusion list and the conclusion is no.\"}"
+    },
+    {
+      "input": "{'specialty_description': 'Vascular Surgery', 'mother_claim_specialty_description': 'Internal Medicine', 'icd_surgery_description': 'Hypertension management, diabetes control, cholesterol monitoring', 'exclusions': 'Cosmetic procedures, routine vaccinations'}",
+      "expected_output": "{'conclusion': 'no', 'explanation': \"The specialty description 'Vascular Surgery' does not match the mother claim's specialty 'Internal Medicine'. The ICD and surgery descriptions are related to chronic disease management, which falls under internal medicine, not vascular surgery. Therefore, the specialty description is not relevant.\"}"
+    },
+    {
+      "input": "{'specialty_description': 'Vascular Surgery', 'mother_claim_specialty_description': 'General Surgery', 'icd_surgery_description': 'Appendectomy, Cholecystectomy', 'exclusions': 'Cosmetic procedures, infertility treatments'}",
+      "expected_output": "Expected output 7"
+    },
+    {
+      "input": "{'specialty_description': 'Internal Medicine', 'mother_claim_specialty_description': 'Hematology', 'icd_surgery_description': 'Anemia, Thrombocytopenia, Bone Marrow Biopsy', 'exclusions': 'Routine Physical Exams, Preventative Care'}",
+      "expected_output": "Expected output 8"
+    },
+    {
+      "input": "{'specialty_description': 'Pain Management', 'mother_claim_specialty_description': 'Orthopedics', 'icd_surgery_description': 'Knee replacement, Hip replacement, Spinal fusion', 'exclusions': 'None'}",
+      "expected_output": "Expected output 9"
+    },
+    {
+      "input": "{'specialty_description': 'Podiatry', 'mother_claim_specialty_description': 'Physical Medicine and Rehabilitation', 'icd_surgery_description': 'Stroke rehabilitation, Spinal cord injury rehabilitation', 'exclusions': 'None'}",
+      "expected_output": "Expected output 10"
+    },
+    {
+      "input": "{'specialty_description': 'Radiology', 'mother_claim_specialty_description': 'Neurosurgery', 'icd_surgery_description': 'Brain tumor resection, Spinal stenosis surgery', 'exclusions': 'Acupuncture, Chiropractic Care'}",
+      "expected_output": "Expected output 11"
+    },
+    {
+      "input": "{'specialty_description': 'Not able to find specialty.', 'mother_claim_specialty_description': 'Ophthalmology', 'icd_surgery_description': 'Cataract surgery, Glaucoma treatment', 'exclusions': 'Experimental treatments'}",
+      "expected_output": "Expected output 12"
+    }
+  ]
+}

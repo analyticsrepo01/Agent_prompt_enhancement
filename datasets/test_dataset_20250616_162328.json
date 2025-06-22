@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "original_prompt": "## Context:\n    Evaluate the relevance and necessity of all the provided medical care in relation to each item in the ICD and surgery descriptions list using your professional medical knowledge.\n   \n    ## Instruction:\n    For each item in the ICD and surgery descriptions list, determine:\n    If the medical care is necessary for diagnostic or examination purposes.\n    If the medical care is effective for the disease.\n    If the benefits of medical care outweigh any risks.\n    If the medical care is a standard practice for the diagnosis.\n    If the medical care is essential for the disease and not for cosmetic/lifestyle purposes.\n    If the medical care indirectly treats the disease.\n    Medical care that is follow-up visits, repeat visits, repeat consultation, total amount, GST information, subsidies or discounts all conclude as 'yes'. Especially for GST, their descriptions may come in forms such as 'GST - ADD GST', 'GST - LESS GST'; for any descriptions that resemble these, conclude as 'yes'.\n    Considering the interactions between drugs, some drugs and treatments may not be designed for the patient's diagnoses and surgeries, but rather to counteract the side effects caused by other drugs. this scenario also needs to conclude as 'yes'\n    Analyse the exclusion details and verify if the treatment is relevant to the provided exclusion. if the treatment is relevant to the exclusion, conclude as 'no'. 'explanation' should be provided as the treatment is relevant to the exclusion list.\n    Conversely, consider the treatment medically unnecessary if it is ineffective, has safer alternatives, is discouraged by guidelines, or if risks outweigh benefits.\n   \n    ## Input: Given Medical Care: {treatments}.\n    ## ICD and Surgery Description list: {icd_surgery_description}.\n    ## Exclusion details: {exclusions}.\n   \n    ### Question: are all the given medical care at least a relevant testing or treatment for one of the items in the ICD and surgery descriptions list.\n   \n    ### Conclusion:\n    1. Explain the given result as a doctor.\n    2. Given different patient profiles and medical histories, provide a probability score without an explanation based on your analysis for the Yes/No binary output you provided to indicate the likelihood of this claim getting approved.\n   \n    ### Response: MUST Provide the output in json format with a key \"conclusion\" stating yes/no of the relevance, a key \"probability score\" providing a probability score (0-1 scale) to indicate the likelihood of this claim getting approved with 2 decimal places, and another key \"explanation\" stating the explanation as a doctor. Ensure that the conclusion is \"yes\" only if the probability score is at least 0.5. Ensure that the explanation is given in complete sentences without any truncations.\n    ",
+    "total_cases": 12,
+    "initial_success_rate": 100.0,
+    "generation_timestamp": "20250616_162328"
+  },
+  "test_cases": [
+    {
+      "input": "{'treatments': 'Amoxicillin 500mg PO TID for 7 days', 'icd_surgery_description': 'Acute bacterial sinusitis (J01.90)', 'exclusions': 'None'}",
+      "expected_output": "{'conclusion': 'yes', 'probability score': 0.95, 'explanation': 'Amoxicillin is a common and effective antibiotic used to treat acute bacterial sinusitis. It addresses the underlying bacterial infection, a necessary and standard practice for this diagnosis. The benefits of treating the infection outweigh the risks associated with Amoxicillin in most patients.'}"
+    },
+    {
+      "input": "{'treatments': 'Liposuction of abdomen', 'icd_surgery_description': 'Morbid obesity (E66.01)', 'exclusions': 'Cosmetic surgery'}",
+      "expected_output": "{'conclusion': 'no', 'probability score': 0.1, 'explanation': 'While morbid obesity is a serious medical condition, liposuction is generally considered a cosmetic procedure and is not a standard or medically necessary treatment for morbid obesity. It does not address the underlying metabolic issues or associated health risks. The treatment is relevant to the exclusion list.'}"
+    },
+    {
+      "input": "{'treatments': 'Ondansetron 4mg IV PRN for nausea', 'icd_surgery_description': 'Chemotherapy-induced nausea and vomiting (R11.0)', 'exclusions': 'None'}",
+      "expected_output": "{'conclusion': 'yes', 'probability score': 0.9, 'explanation': \"Ondansetron is a standard antiemetic medication used to manage nausea and vomiting induced by chemotherapy. It does not treat the underlying cancer, but it significantly improves the patient's quality of life during chemotherapy. Therefore, it indirectly treats the disease by mitigating its side effects.\"}"
+    },
+    {
+      "input": "{'treatments': 'Follow-up visit with cardiologist', 'icd_surgery_description': 'Post myocardial infarction (I21.9)', 'exclusions': 'None'}",
+      "expected_output": "{'conclusion': 'yes', 'probability score': 0.99, 'explanation': \"Follow-up visits with a cardiologist are crucial after a myocardial infarction to monitor the patient's recovery, adjust medications, and prevent future cardiac events. This is a standard practice and essential for managing the long-term consequences of the heart attack.\"}"
+    },
+    {
+      "input": "{'treatments': 'GST - ADD GST', 'icd_surgery_description': 'Appendectomy (K35.80)', 'exclusions': 'None'}",
+      "expected_output": "{'conclusion': 'yes', 'probability score': 1.0, 'explanation': 'The medical care provided is related to GST (Goods and Services Tax), which is a mandatory tax applied to the appendectomy. This is a necessary component of the billing and payment process for the medical service.'}"
+    },
+    {
+      "input": "{'treatments': 'Lisinopril 10mg PO daily', 'icd_surgery_description': 'Chronic Kidney Disease (N18.3), Hypertension (I10)', 'exclusions': 'Experimental treatments for hypertension'}",
+      "expected_output": "{'conclusion': 'yes', 'probability score': 0.92, 'explanation': 'Lisinopril is an ACE inhibitor commonly prescribed to manage hypertension and protect kidney function in patients with chronic kidney disease. It is a standard and effective treatment for hypertension, which is a significant risk factor for the progression of chronic kidney disease. It is not an experimental treatment.'}"
+    },
+    {
+      "input": "{'treatments': 'Vitamin D supplementation', 'icd_surgery_description': 'Osteoporosis (M81.0)', 'exclusions': 'Nutritional supplements for general well-being'}",
+      "expected_output": "Expected output 7"
+    },
+    {
+      "input": "{'treatments': 'Acupuncture', 'icd_surgery_description': 'Chronic lower back pain (M54.5)', 'exclusions': 'Experimental or unproven treatments'}",
+      "expected_output": "Expected output 8"
+    },
+    {
+      "input": "{'treatments': 'Morphine 10mg PO Q4H PRN for pain', 'icd_surgery_description': 'Postoperative pain following appendectomy (K35.80)', 'exclusions': 'Long-term opioid therapy for chronic non-cancer pain'}",
+      "expected_output": "Expected output 9"
+    },
+    {
+      "input": "{'treatments': 'Hyperbaric oxygen therapy', 'icd_surgery_description': 'Diabetic foot ulcer (E11.621)', 'exclusions': 'Wound care unless standard of care'}",
+      "expected_output": "Expected output 10"
+    },
+    {
+      "input": "{'treatments': 'Repeat consultation with cardiologist', 'icd_surgery_description': 'Atrial fibrillation (I48.91)', 'exclusions': 'None'}",
+      "expected_output": "Expected output 11"
+    },
+    {
+      "input": "{'treatments': 'Prophylactic mastectomy', 'icd_surgery_description': 'Family history of breast cancer (Z80.3)', 'exclusions': 'Elective procedures without clear medical necessity'}",
+      "expected_output": "Expected output 12"
+    }
+  ]
+}
